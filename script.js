@@ -14,7 +14,7 @@ function onReady() {
 function newDiv() {
     console.log('generateButton clicked');
     clickCount ++;
-    let div = '<div><p>' + clickCount + '</p></div>';
+    let div = '<div class="red"><p>' + clickCount + '</p></div>';
     let swapButton = '<button class="swapButton">Swap</button>';
     let deleteButton = '<button class="deleteButton">Delete</button>';
     $('body').append(div);
@@ -27,6 +27,6 @@ function deleteDiv() {
 }
 
 function swapColors() {
-
+    console.log('swapButton clicked');
 }
 
