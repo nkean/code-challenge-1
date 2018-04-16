@@ -7,13 +7,26 @@ $(document).ready(onReady);
 function onReady() {
     console.log('jQuery working');
     $('#generateButton').click(newDiv);
+    $('body').on('click', '.swapButton', swapColors);
+    $('body').on('click', '.deleteButton', deleteDiv);
 }
 
 function newDiv() {
+    console.log('generateButton clicked');
     clickCount ++;
     let div = '<div><p>' + clickCount + '</p></div>';
     let swapButton = '<button class="swapButton">Swap</button>';
-    let deleteButton = '<button class="deletButton">Delete</button>';
+    let deleteButton = '<button class="deleteButton">Delete</button>';
     $('body').append(div);
     $('body div:last').append(swapButton + deleteButton);
 }
+
+function deleteDiv() {
+    console.log('deleteButton clicked');
+    $(this).parent().remove();
+}
+
+function swapColors() {
+
+}
+
