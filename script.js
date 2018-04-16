@@ -28,5 +28,13 @@ function deleteDiv() {
 
 function swapColors() {
     console.log('swapButton clicked');
+    if ($(this).parent().hasClass("red")) {
+        $(this).parent().removeClass("red");
+        $(this).parent().addClass("yellow");
+    }
+    else {
+        $(this).parent().removeClass("yellow");
+        $(this).parent().addClass("red");
+    }
 }
 
